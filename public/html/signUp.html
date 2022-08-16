@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Sign Up</title>
+         <!-- Cool Google Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+        <!-- Our stylesheet -->
+        <link rel="stylesheet" type="text/css" href="../css/signUp.css">
+    </head>
+    <body>
+            <div id="content_container">
+                <div id="form_container">
+                    <div id="form_header_container">
+                        <h2 id="form_header"> Sign Up </h2>
+                    </div>
+    
+                    <div id="form_content_container">
+                        <div id="form_content_inner_container">
+                            
+                            <input type="text" id="full_name" placeholder="Full name"><br />
+                            <input type="email" id="email" placeholder="Email"><br />
+                            <input type="password" id="password" placeholder=" Password"><br />
+                            <input type="date" id="date" value="date_of_birthS"><br />
+                            <div class="input-radio">
+                                <input type="radio" id="Male" name="Gender" value="Male" checked>
+                                <label for="Male">Male</label>
+                                <input type="radio" id="Female" name="Gender" value="Female" >
+                                <label for="Female">Female</label>
+                                <input type="radio" id="Others" name="Gender" value="Others" >
+                                <label for="Female">Others</label><br/>
+                            </div>
+                            <div id="button_container">
+                               
+                                <button id="register" onclick="register()">Register</button>
+                                <button id="reset">Reset</button>
+
+                                <!-- <input type="reset" value="Reset"> -->
+                            </div>
+                            <div class="login-page">
+                                Already have an account <a href='./login.html'>login</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+    </body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+    <!-- Our script must be loaded after firebase references -->
+    <script src="../js/signUp.js">
+
+	</script>
+
+</html> 
