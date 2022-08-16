@@ -1,3 +1,14 @@
+// import logout from "./signUp.js";
+
+// let sign_out = document.querySelector('#user-out');
+// sign_out.addEventListener('click', ()=>{
+// logout();
+// })
+
+let login_logout = document.querySelector('#user-in');
+login_logout.onclick = () =>{
+  login_logout.classList.toggle('active');
+}
 
 
 let menu = document.querySelector('#menu-bars');
@@ -91,11 +102,6 @@ function fadeOut(){
 window.onload = fadeOut;
 
 
-const logout = document.querySelector('#user-out');
-logout.addEventListener('click', (e)=>{
-  e.preventDefault();
-  auth.signOut();
-})
 
 
 // Cart

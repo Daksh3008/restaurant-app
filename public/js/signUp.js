@@ -181,9 +181,13 @@
 				document.getElementById("password").value = "";
 			  }); 
 
-			  const logout = document.querySelector('#user-out');
-			  logout.addEventListener('click', (e)=>{
-				  e.preventDefault();
-				  auth.signOut();
-			  })
+			//   export default function logout(){
+						  
+			// 	e.preventDefault();
+			// 	auth.signOut().then(()=>{
+			// 	  console.log("user logged out")
+			// 	});
+			 
+			//   }
+	
 			  
