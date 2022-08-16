@@ -25,7 +25,16 @@
 
 			//listing for auth status
 		auth.onAuthStateChanged(user => {
-			console.log(user)
+			if(user){
+				const logout = document.querySelector('#user-out');
+				logout.addEventListener('click', (e)=>{
+				  e.preventDefault();
+				  auth.signOut().then(()=>{
+					console.log("user logged out")
+				  });
+				})
+				
+			}
 		})
 
 
@@ -181,13 +190,3 @@
 				document.getElementById("password").value = "";
 			  }); 
 
-			//   export default function logout(){
-						  
-			// 	e.preventDefault();
-			// 	auth.signOut().then(()=>{
-			// 	  console.log("user logged out")
-			// 	});
-			 
-			//   }
-	
-			  

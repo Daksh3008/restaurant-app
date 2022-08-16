@@ -5,10 +5,7 @@
 // logout();
 // })
 
-let login_logout = document.querySelector('#user-in');
-login_logout.onclick = () =>{
-  login_logout.classList.toggle('active');
-}
+
 
 
 let menu = document.querySelector('#menu-bars');
