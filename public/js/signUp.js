@@ -1,41 +1,45 @@
 		// Your web app's Firebase configuration
-		const firebaseConfig = {
+		
+			// let button_text = document.getElementById('login').innerText
+			
+			const firebaseConfig = {
 
-			apiKey: "AIzaSyAGuzgDlxHoFh2Y7AwZkkAX5reAz960DiA",
-			
-			authDomain: "restaurant-app-de673.firebaseapp.com",
-			
-			projectId: "restaurant-app-de673",
-			
-			storageBucket: "restaurant-app-de673.appspot.com",
-			
-			messagingSenderId: "57200602935",
-			
-			appId: "1:57200602935:web:50650e45cff9d52cd674b2"
-			
-			};
-			
-			
-			// Initialize Firebase
-			firebase.initializeApp(firebaseConfig);
-			// Initialize variables
-			const auth = firebase.auth()
-			const database = firebase.database()
-			
-
+				apiKey: "AIzaSyAGuzgDlxHoFh2Y7AwZkkAX5reAz960DiA",
+				
+				authDomain: "restaurant-app-de673.firebaseapp.com",
+				
+				projectId: "restaurant-app-de673",
+				
+				storageBucket: "restaurant-app-de673.appspot.com",
+				
+				messagingSenderId: "57200602935",
+				
+				appId: "1:57200602935:web:50650e45cff9d52cd674b2"
+				
+				};
+				
+				
+				
+				// Initialize Firebase
+				firebase.initializeApp(firebaseConfig);
+				// Initialize variables
+				const auth = firebase.auth()
+				const database = firebase.database()
 			//listing for auth status
 		auth.onAuthStateChanged(user => {
-			if(user){
-				const logout = document.querySelector('#user-out');
-				logout.addEventListener('click', (e)=>{
-				  e.preventDefault();
-				  auth.signOut().then(()=>{
-					console.log("user logged out")
-				  });
-				})
-				
-			}
+			console.log(user) 
 		})
+			//logout
+		const logout = document.querySelector('#logout');
+		logout.addEventListener('click', (e)=>{
+				e.preventDefault();
+				auth.signOut().then(()=>{
+				//window.location.href="../html/login.html"
+				window.location.href="../index.html"
+				
+				});
+			})
+
 
 
 			// Set up our register function
@@ -89,7 +93,10 @@
 				database_ref.child('users/' + user.uid).set(user_data)
 			
 				// DOne
-				window.location.href="../html/login.html"
+				// window.location.href="../html/login.html"
+				
+				window.location.href="../index.html"
+
 				console.log('User Created!!')
 				
 				 
@@ -183,10 +190,10 @@
 			  }
 			} 
 
-			document.getElementById("reset").addEventListener("click", function(){
-				document.getElementById("email").value = "";
-				document.getElementById("full_name").value = "";
-				document.getElementById("date").value = "";
-				document.getElementById("password").value = "";
-			  }); 
+			// document.getElementById("reset").addEventListener("click", function(){
+			// 	document.getElementById("email").value = "";
+			// 	document.getElementById("full_name").value = "";
+			// 	document.getElementById("date").value = "";
+			// 	document.getElementById("password").value = "";
+			//   }); 
 

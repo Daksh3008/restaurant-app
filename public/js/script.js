@@ -5,6 +5,58 @@
 // logout();
 // })
 
+		// // Your web app's Firebase configuration
+		// const firebaseConfig = {
+
+		// 	apiKey: "AIzaSyAGuzgDlxHoFh2Y7AwZkkAX5reAz960DiA",
+			
+		// 	authDomain: "restaurant-app-de673.firebaseapp.com",
+			
+		// 	projectId: "restaurant-app-de673",
+			
+		// 	storageBucket: "restaurant-app-de673.appspot.com",
+			
+		// 	messagingSenderId: "57200602935",
+			
+		// 	appId: "1:57200602935:web:50650e45cff9d52cd674b2"
+			
+		// 	};
+			
+
+			
+		// 	// Initialize Firebase
+		// 	firebase.initializeApp(firebaseConfig);
+		// 	// Initialize variables
+		// 	const auth = firebase.auth()
+		// 	const database = firebase.database()
+			
+			// let button_text = document.getElementById('login').innerText
+			
+      auth.onAuthStateChanged(user => {
+        console.log(user)
+      })
+			//listing for auth status
+		// auth.onAuthStateChanged(user => {
+    //   var usr = document.getElementById('user');
+    //   usr.addEventListener('click',(e)=>{
+    //     if(user){
+    //       e.preventDefault();
+    //       window.location.href="../html/logout.html"
+    //     } 
+    //   })
+		// })
+			//logout
+		// function logout(){
+    //   document.querySelector('#logout').addEventListener('click', (e)=>{
+		// 		e.preventDefault();
+		// 		auth.signOut().then(()=>{
+		// 		//window.location.href="../html/login.html"
+		// 		window.location.href="../index.html"
+    //     console.log("user logged out")
+		// 		});
+		// 	})
+    // } 
+
 
 
 
